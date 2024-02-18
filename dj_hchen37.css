@@ -46,6 +46,24 @@
 	left: 0;
 }
 
+#Tools{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 40px;
+	margin-top: 100px;
+	font-size: 25px;
+	align-self: auto;
+}
+
+.playlistBtn{
+	background-color: #5f4bb6;
+	color: white;
+	margin-bottom: 20px;
+	padding: 10px;
+	text-align: center;
+	/*border-radius: 5px;*/
+	font-family: Arial, Helvetica, sans-serif;
+}
+
 #rightBar{
 	top: 0;
 	right: 0;
@@ -117,4 +135,15 @@ footer{
 	bottom: 612px;
 	left: 250px;
 	right: 250px;
+}
+
+#RadioDes{
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+#RadioName img{
+	width: 300px;
+	max-height: 250px;
+	margin-top: 8px;
 }
