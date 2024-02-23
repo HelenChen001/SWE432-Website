@@ -1,0 +1,94 @@
+/* Basic CSS for navigation bar */
+body {
+    margin: 0;
+    height: 100%;
+}
+
+nav {
+    background-color: #E9E5E5;
+    height: 75px;
+    position: relative;
+}
+
+nav p {
+    display: inline;
+    position: absolute;
+    left: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+#logo {
+    display: inline;
+    position: relative;
+    top: 17px;
+    left: 15px;
+    width: 55px;
+    height: 50px;
+}
+
+#Admin {
+    display: inline;
+    position: absolute;
+    top: 35px;
+    left: 257px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+
+nav ul {
+    float: right;
+    position: relative;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li:nth-child(3) {
+    margin-right: 50px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 10px;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(rgb(95, 75, 182), rgb(247, 245, 251));
+    padding: 5px;
+}
+
+.grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 2fr 11fr 2fr;
+    grid-template-areas: "a1 a2 a3";
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    background-color: #D9D9D9;
+}
+#left-sidebar{
+    grid-area: a1;
+}
+
+#right-sidebar{
+    grid-area: a3;
+}
+
+#main-section{
+    grid-area: a2;
+    height: 100%;
+    background-color: #1b1b1e;
+    color: white;
+}
+
+
