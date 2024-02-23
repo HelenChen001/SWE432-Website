@@ -7,20 +7,41 @@
 	<style>
 		body{
 			background-color: #1b1b1e;
-			height: 1000px;
+			height: 1300px;
 		}
+		footer{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: Arial, Helvetica, sans-serif;
+			padding-bottom: 15px;
+		}
+		#emailPNG{
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			left: 575px;
+		}
+		#phonePNG{
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			right: 560px;
+		}
+
 	</style>
 </head>
 <body>
 	<header id="pageHeader">
 		<div id="headerContent">
+			<img src="Images/logo2.png" alt="">
 			<div id="logo">
 				<div id="logoName">TrueCrimeToday</div>
-				<div id="Admin">ADMIN</div>
 			</div>
+			<div id="Admin">ADMIN</div>
 			<div id="headerLinks">
-				<a href="">Manager</a>
-				<a href="">Producer</a>
+				<a href="manager_anguy38.html">Manager</a>
+				<a href="play_order.html">Producer</a>
 				<a href="dj_hchen37.html">DJ</a>
 			</div>
 		</div>
@@ -30,41 +51,153 @@
 		<div id="RadioDes">Fantastical and bizarre American true crime cases. From bank heists to stupid crimes!</div>
 		<div class="RadioContainer">
 			<img src="Images/podcast.png" alt="">
+			<!--Form-->
+			<form action="">
 			<div id="RadioGrid">
-				<div>Time slot 1</div>
-				<div>Time slot 2</div>
-				<div>Time slot 3</div>
-				<div>Time slot 4</div>
-				<div>Time slot 5</div>
-				<div>Time slot 6</div>
-				<div>Time slot 7</div>
-				<div>Time slot 8</div>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot1" name="timeSlot">Time Slot 1</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot2" name="timeSlot">Time Slot 2</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot3" name="timeSlot">Time Slot 3</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot4" name="timeSlot">Time Slot 4</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot5" name="timeSlot">Time Slot 5</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot6" name="timeSlot">Time Slot 6</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot7" name="timeSlot">Time Slot 7</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot8" name="timeSlot">Time Slot 8</label>
 			</div>
+			<button id="formSelectAll">Select All</button>
+			<button id="formSubmit" type="submit">Submit</button>
+			
+			</form>
 		</div>
 	<article>
 		<div id="SearchBar">
 			<img src="Images/Search_img.png" alt="">
-			Search Bar
+			<input type="text" id="searchInput" placeholder="Search">
 		</div>
 		<div id="SearchResults">
-			<div class="SRcols"></div>
 			<!--Finish the SRCOLS later-->
+			<div id="SearchTable">
+				<!--First row-->
+				<img src="Images/dj.jpg" alt="">
+				<div class="titleColumn">
+					<u>title/name of artist</u>
+				</div>
+				<div class="selectColumn">
+					<select name="Timeslot" id="TimeOptions">
+						<option value="">Time Slot 1</option>
+						<option value="">Time Slot 2</option>
+						<option value="">Time Slot 3</option>
+						<option value="">Time Slot 4</option>
+						<option value="">Time Slot 5</option>
+						<option value="">Time Slot 6</option>
+						<option value="">Time Slot 7</option>
+						<option value="">Time Slot 8</option>
+					</select>
+				</div>
+				<div class="addButtonColumn">
+					<button>Add</button>
+				</div>
+				<!--Second row-->
+				<img src="Images/dj.jpg" alt="">
+				<div class="titleColumn">
+					<u style="max-height: 80px;">title/name of artist</u>
+				</div>
+				<div class="selectColumn">
+					<select name="Timeslot" id="TimeOptions">
+						<option value="">Time Slot 1</option>
+						<option value="">Time Slot 2</option>
+						<option value="">Time Slot 3</option>
+						<option value="">Time Slot 4</option>
+						<option value="">Time Slot 5</option>
+						<option value="">Time Slot 6</option>
+						<option value="">Time Slot 7</option>
+						<option value="">Time Slot 8</option>
+					</select>
+				</div>
+				<div class="addButtonColumn">
+					<button>Add</button>
+				</div>
+				<!--Third-->
+				<img src="Images/dj.jpg" alt="">
+				<div class="titleColumn">
+					<u style="max-height: 80px;">title/name of artist</u>
+				</div>
+				<div class="selectColumn">
+					<select name="Timeslot" id="TimeOptions">
+						<option value="">Time Slot 1</option>
+						<option value="">Time Slot 2</option>
+						<option value="">Time Slot 3</option>
+						<option value="">Time Slot 4</option>
+						<option value="">Time Slot 5</option>
+						<option value="">Time Slot 6</option>
+						<option value="">Time Slot 7</option>
+						<option value="">Time Slot 8</option>
+					</select>
+				</div>
+				<div class="addButtonColumn">
+					<button>Add</button>
+				</div>
+				<!--Fourt-->
+				<img src="Images/dj.jpg" alt="">
+				<div class="titleColumn">
+					<u style="max-height: 80px;">title/name of artist</u>
+				</div>
+				<div class="selectColumn">
+					<select name="Timeslot" id="TimeOptions">
+						<option value="">Time Slot 1</option>
+						<option value="">Time Slot 2</option>
+						<option value="">Time Slot 3</option>
+						<option value="">Time Slot 4</option>
+						<option value="">Time Slot 5</option>
+						<option value="">Time Slot 6</option>
+						<option value="">Time Slot 7</option>
+						<option value="">Time Slot 8</option>
+					</select>
+				</div>
+				<div class="addButtonColumn">
+					<button>Add</button>
+				</div>
+
+				</div>
+			
+			</div>
 		</div>
 	</article>
 		
 	</article>
-
 	<aside id="leftBar">
 		<p id="Tools"><strong>Tools</strong></p>
-		<div class="playlistBtn">Assigned Playlist</div>
-		<div class="playlistBtn">Saved Playlist 1</div>
-		<div class="playlistBtn">Saved Playlist 2</div>
-		<div class="playlistBtn">Saved Playlist 3</div>
+		<div class="playlistBtn"><button>Assigned Playlist</button></div>
+		<div class="playlistBtn"><button>Saved Playlist 1</button></div>
+		<div class="playlistBtn"><button>Saved Playlist 2</button></div>
+		<div class="playlistBtn"><button>Saved Playlist 3</button></div>
 	</aside>
 
-	<aside id="rightBar"></aside>
+	<aside id="rightBar">
+		<img src="Images/podcast_tbnl.png" alt="">
+		<div class="titleBox">
+			<p id="rightBarTitle">Baking A Murder Episode 1</p>
+		</div>
+		<p style="background-color: #E9E5E5; text-align: center;padding: 8px 8px;">Playlist Queue</p>
+		<ol style="color: white; background-color: #1b1b1e;padding-left: 16%; padding-top: 8px; padding-bottom: 8px; height: auto; min-height: 270px;">
+			<li><u>B.A.M Episode 1</u></li>
+			<li><u>Bank Height gone wrong!</u></li>
+			<li><u>Trapped under a Rock for 10 months</u></li>
+			<li><u>Who killed Mr. Rogers?</u></li>
+			<li><u>American Jack The Ripper?</u></li>
+			<li><u>Ghost Hunting in Cemeteries</u></li>
+		</ol>
+	</aside>
 
-	<footer></footer>
+	<footer>
+		<p><i>Contact Us</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			sampleEmail@email.com&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			123-456-7890
+		</p>
+		<img src="Images/email.png" alt="" id="emailPNG">
+		<img src="Images/phone.png" alt="" id="phonePNG">
+
+
+	</footer>
 </body>
 
 </html>

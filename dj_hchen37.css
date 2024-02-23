@@ -1,3 +1,15 @@
+
+button{
+	background-color: #5f4bb6;
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #5f4bb6;
+	box-sizing: border-box;
+	cursor: pointer; 
+	border-radius: 5px;
+
+}
 #pageHeader{
 	background-color: #E9E5E5;
 	height: 75px;
@@ -8,27 +20,19 @@
 	z-index: 1000;
 }
 
-#logo{
-	background-color: #ef233c;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	position: relative;
-}
-
 #logoName{
-	position: absolute;
-	left: 40px;
+	padding-left: 8px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 25px;
+	align-items: center;
 }
 
 #Admin{
-	position: absolute;
-	left: 227px;
-	top: 10px;
+	padding-left: 5px;
+	padding-top: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
+	text-align: center;
 }
 
 #leftBar, #rightBar{
@@ -53,26 +57,33 @@
 #Tools{
 	font-family: Arial, Helvetica, sans-serif;
 	margin-left: 40px;
-	margin-top: 100px;
+	margin-top: 75px;
 	font-size: 25px;
 	align-self: auto;
 }
 
-.playlistBtn{
+#leftBar .playlistBtn button {
 	background-color: #5f4bb6;
 	color: white;
-	margin-bottom: 20px;
 	padding: 10px;
 	text-align: center;
-	/*border-radius: 5px;*/
 	font-family: Arial, Helvetica, sans-serif;
 	border: 1px solid #5f4bb6;
 	box-sizing: border-box;
+	width: 100%; /* Make the button take 100% width of its container */
+	cursor: pointer; /* Add a pointer cursor for better UX */
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+#leftBar .playlistBtn button:hover {
+	background-color: #4b388e; /* Change color on hover if desired */
 }
 
 #rightBar{
 	top: 0;
 	right: 0;
+	
 }
 
 footer{
@@ -91,6 +102,14 @@ footer{
 	align-items: center;
 	height: 100%;
 	padding: 0px 20px ;
+}
+
+#headerContent img{
+	width: 40px;
+	height: 35px;
+	position: relative;
+	align-items: center;
+
 }
 
 #headerLinks {
@@ -139,6 +158,7 @@ footer{
 	height: 8px;
 	background-color: #5f4bb6;
 	position: absolute;
+	top: 160px;
 	bottom: 612px;
 	left: 250px;
 	right: 250px;
@@ -157,14 +177,17 @@ footer{
 
 }
 
-#RadioGrid div{
+#RadioGrid label{
 	display: grid;
 	background-color: #D9D9D9;
+	font-size: 20px;
 	width: 234px;
 	height: 49px;
+	position: relative;
+	
 	margin-left: 19px;
 	margin-top: 15px;
-	font-size: 20px;
+	
 	align-items: center;
 	text-align: center;
 	color: #000;
@@ -200,13 +223,142 @@ footer{
 	margin-right: 13px;
 }
 
+#searchInput {
+	width: 90%;
+	padding: 5px;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
 #SearchResults{
 	margin-top: 31px;
-	height: 291px;
+	height: 530px;
 	width: 905px;
 	background-color: #D9D9D9;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
 	padding: 10px;
+}
+
+#SearchTable{
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 1fr;
+	grid-template-rows: 130px;
+	text-align: justify;
+	/*: 2px solid black;*/
+}
+
+#SearchTable > * {
+    /*border: 1px solid black;  Add a border to each child element */
+    padding: 10px;  /*Add padding for better visual separation */
+	max-height: 130px;
+}
+
+#SearchTable img{
+	max-width: 150px;
+	max-height: 130px;
+	padding: 15px;
+	
+}
+
+#SearchTable .titleColumn {
+	text-align: justify;
+	padding-top: 15px;
+	font-size: 35px;
+	font-family: Arial, Helvetica, sans-serif;
+	white-space: nowrap;
+	padding-right: 220px;
+	color: #000;
+	padding-top: 40px;
+	max-height: 130px;
+	
+}
+
+.addButtonColumn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.addButtonColumn button {
+	background-color: #5f4bb6;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid #5f4bb6;
+	box-sizing: border-box;
+	cursor: pointer;
+	border-radius: 5px;
+	max-height: 80px;
+	margin-top: px;
+	
+}
+
+.addButtonColumn button:hover {
+	background-color: #4b388e;
+}
+.selectColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectColumn select {
+
+    padding: 3px;
+    font-size: 16px;
+    border: 1px solid #5f4bb6;
+    border-radius: 5px;
+	max-height: 80px;
+	align-self: center;
+}
+
+#rightBar .contentWrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rightBar img{
+	max-width: 150px;
+	max-height: 150px;
+	margin-top: 75px;
+	padding-bottom: 15px;
+}
+
+#rightBarTitle{
+	text-align: center;
+}
+
+.titleBox {
+    background-color: #E9E5E5;
+	padding: 1px 1px;
+}
+#rightBar ol li{
+	text-align: left;
+	margin-top: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#formSubmit{
+	position: relative;
+	align-items: center;
+	top: 10px;
+	padding: 8px 8px;
+}
+
+#formSelectAll{
+	margin-left: 180px;
+	padding: 8px 8px;
+	align-items: center;
+	position: relative;
+	top: 10px;
+	margin-right: 8px;
 }
