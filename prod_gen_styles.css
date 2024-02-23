@@ -5,7 +5,7 @@
 
 body {
   background-color: #1b1b1e;
-  position: relative;
+  position: fixed;
 }
 /*-------header--------*/
 header {
@@ -117,6 +117,9 @@ a {
 #info-display hr {
   width: 75%;
 }
+
+/*-------main-container--------*/
+
 /*-------footer--------*/
 .footer {
   background-color: white;
