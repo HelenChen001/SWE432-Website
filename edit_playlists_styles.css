@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  height: 1300px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #1b1b1e;
+  color: white;
+}
+#main-content h2 {
+  font-size: 35px;
+  margin-left: 250px;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+#main-content h3 {
+  font-size: 15px;
+  margin-left: 250px;
+  margin-bottom: 0;
+}
+#purple-line {
+  background-color: #5f4bb6;
+  width: 900px;
+  height: 50px;
+  margin-left: 250px;
+  padding-top: 0px;
+  margin-top: 0;
+}
+.playlist-section {
+  display: flex;
+  flex-direction: row;
+}
+/* playlist styling */
+.playlist-grid {
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  margin-top: 10px;
+  width: 500px;
+  height: auto;
+  background-color: #e9e5e5;
+}
+
+.item {
+  width: 90%;
+  height: 30px;
+  background-color: white;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 10px;
+  color: black;
+  word-spacing: 150px;
+}
+
+/* editing playlist styles */
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+.edit-section button {
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#search {
+  display: flex;
+  flex-direction: row;
+  margin-left: 250px;
+  margin-top: 40px;
+  width: 90%;
+  background-color: #e9e5e5;
+  align-items: center;
+  height: 50px;
+}
+#search img {
+  width: 50px;
+  height: auto;
+}
+#search input {
+  background-color: #e9e5e5;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+}
+#search-results {
+  margin-left: 250px;
+  background-color: #e9e5e5;
+  margin-top: 10px;
+  color: black;
+  padding: 0px 7px;
+  height: 100%;
+}
+/* navbar styling */
+.navbar {
+  background-color: #e9e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+#navbar-left * {
+  display: inline-block;
+}
+#navbar-left img {
+  width: 30px;
+  height: 100%;
+}
+#navbar-left p {
+  font-size: 14px;
+}
+#navbar-left h2 {
+  font-size: 25px;
+  font-weight: normal;
+}
+#navbar-right a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+/* fix for smoother transition */
+#navbar-right a:hover {
+  background: linear-gradient(to bottom, #5f4bb6, #f7f5fb);
+  padding: 2px;
+}
+/* sidebar styling */
+.sidebar {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.aside-left {
+  left: 0;
+}
+
+.aside-left a {
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  background-color: #5f4bb6;
+  color: white;
+  font-size: 15px;
+  padding: 7px 6px;
+  text-decoration: none;
+}
+.aside-left a:hover {
+  background: linear-gradient(to bottom, #5f4bb6, #f7f5fb);
+  border: none;
+}
+.aside-right {
+  right: 0;
+}
+.aside-right img {
+  width: 100%;
+  height: auto;
+}
+.aside-right figcaption {
+  margin-top: 20px;
+  background-color: #e9e5e5;
+  padding: 5px 20px;
+}
+#right-aside-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #1b1b1e;
+  color: white;
+  align-items: center;
+  margin-top: 35px;
+}
+#info-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+#info-display hr {
+  width: 100%;
+}
+/* footer styling */
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #e9e5e5;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.footer img {
+  width: 20px;
+  height: 100%;
+}
+.footer p {
+  display: inline-block;
+  margin-right: 15px;
+}
