@@ -4,12 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrueCrimeToday Admin</title>
+    <title>Your Website Title</title>
     <link rel="stylesheet" href="manager_anguy38.css">
     <style>
-        #left-sidebar div:nth-child(2) {
+        .songs {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .vl {
+            border-left: 2px solid black;
+            height: 100px;
+            align-self: center;
+        }
+
+        #left-sidebar div:nth-child(3) {
             border: 2px solid #5f4bb6;
             background-color: white;
+        }
+
+        html {
+            height: 110%;
         }
     </style>
 </head>
@@ -39,16 +54,15 @@
 
         <aside class="sidebar" id="right-sidebar">
             <!-- Content for the second aside -->
-            <header>
-                <h1>DJ Profile</h1>
-                <figure>
-                    <img src="images/dj_image.avif" alt="dj-image" id="dj-image" />
-                    <figcaption>Photo</figcaption>
-                </figure>
-                <h3>
-                    DJ Electro
-                </h3>
-            </header>
+        <header>
+            <h1>DJ Profile</h1>
+            <figure>
+                <img src="images/dj_image.avif" alt="dj-image" id="dj-image" /><figcaption>Photo</figcaption>
+            </figure>
+            <h3>
+                DJ Electro
+            </h3>
+        </header>
             <article style="font-size: 12px; text-align: left;margin-bottom: 10px;">
                 Name: DJ Electro<br>
                 Years of Experience: 10 years<br>
@@ -60,7 +74,7 @@
         </aside>
         <section id="main-section">
             <div>
-                <p id="main-section-title">Schedule Assignment</p>
+                <p id="main-section-title">Get Report</p>
             </div>
             <div id="purple-line"></div>
             <form class="grid-time">
@@ -83,49 +97,37 @@
                     <button class="timeslot">5:00 PM</button>
                 </div>
             </form>
-            <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Select DJ</div>
-            <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" />Search DJ</div>
+            <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Report Below</div>
+            <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" />Search Songs in Report
+            </div>
             <div id="dj">
-                <div class="radio-group">
-                    <form>
-                        <div>
-                            <input type="radio" id="dj1" name="dj" value="DJ Electro">
-                            <label for="dj1">DJ Electro</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="dj2" name="dj" value="DJ Mixmaster">
-                            <label for="dj2">DJ Mixmaster</label>
-                        </div>
-                </div>
-                <div class="radio-group">
-                    <div>
-                        <input type="radio" id="dj3" name="dj" value="DJ Spintronix">
-                        <label for="dj3">DJ Spintronix</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="dj4" name="dj" value="DJ Groovebox">
-                        <label for="dj4">DJ Groovebox</label>
+                <div class="radio-group" style="padding: 0px;">
+                    <div class="songs">
+                        <h3>DJ Songs</h3>
+                        <ul>
+                            <li>Song #1</li>
+                            <li>Song #2</li>
+                            <li>Song #3</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="radio-group">
+                <div class="vl"></div>
+                <div class="songs">
                     <div>
-                        <input type="radio" id="dj5" name="dj" value="DJ Bassline">
-                        <label for="dj5">DJ Bassline</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="dj6" name="dj" value="DJ Beatmaster">
-                        <label for="dj6">DJ Beatmaster</label>
+                        <h3>Producer Songs</h3>
+                        <ul>
+                            <li>Song #1</li>
+                            <li>Song #2</li>
+                            <li>Song #3</li>
+                        </ul>
                     </div>
                 </div>
-                </form>
             </div>
             <input type="submit" value="Submit">
-            </form>
         </section>
     </div>
     <footer id="footer"><i>Contact Us</i><img src="images/email.GIF" alt="email" id="email" /><a
             href="#">SampleEmail@gmail.com</a><img src="images/phone.GIF" alt="phone" id="phone" /><a
             href="#">123-456-7890</a></footer>
 </body>
-
 </html>
