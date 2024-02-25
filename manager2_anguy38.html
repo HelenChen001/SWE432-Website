@@ -26,6 +26,19 @@
         html {
             height: 110%;
         }
+
+        #search-input {
+            width: 95%;
+            font-size: 15px;
+            border: #D9D9D9;
+            background-color: #D9D9D9;
+            color: black;
+
+        }
+
+        #search-input:focus {
+            outline: none;
+        }
     </style>
 </head>
 
@@ -38,8 +51,8 @@
         <ul>
             <li><a href="#" style="background: linear-gradient(rgb(95, 75, 182), rgb(247, 245, 251));
                 padding: 5px;">Manager</a></li>
-            <li><a href="#">Producer</a></li>
-            <li><a href="#">DJ</a></li>
+            <li><a href="producer_fndiaye.html">Producer</a></li>
+            <li><a href="dj_hchen37.html">DJ</a></li>
         </ul>
     </nav>
 
@@ -54,15 +67,16 @@
 
         <aside class="sidebar" id="right-sidebar">
             <!-- Content for the second aside -->
-        <header>
-            <h1>DJ Profile</h1>
-            <figure>
-                <img src="images/dj_image.avif" alt="dj-image" id="dj-image" /><figcaption>Photo</figcaption>
-            </figure>
-            <h3>
-                DJ Electro
-            </h3>
-        </header>
+            <header>
+                <h1>DJ Profile</h1>
+                <figure>
+                    <img src="images/dj_image.avif" alt="dj-image" id="dj-image" />
+                    <figcaption>Photo</figcaption>
+                </figure>
+                <h3>
+                    DJ Electro
+                </h3>
+            </header>
             <article style="font-size: 12px; text-align: left;margin-bottom: 10px;">
                 Name: DJ Electro<br>
                 Years of Experience: 10 years<br>
@@ -81,7 +95,7 @@
                 <div id="input-date">
                     <label for="start" style="font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Select Date
                         and Timeslots</label>
-                    <input type="date" id="start" name="trip-start" value="2024-07-22" min="2024-01-01" required/>
+                    <input type="date" id="start" name="trip-start" value="2024-07-22" min="2024-01-01" required />
                     <figure><img src="images/calendar.png" alt="email" id="calendar" />
                         <figcaption>Calendar</figcaption>
                     </figure>
@@ -98,7 +112,8 @@
                 </div>
             </form>
             <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Report Below</div>
-            <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" />Search Songs in Report
+            <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" /><input type="text"
+                    placeholder="Search for Names" id="search-input">
             </div>
             <div id="dj">
                 <div class="radio-group" style="padding: 0px;">
@@ -130,4 +145,5 @@
             href="#">SampleEmail@gmail.com</a><img src="images/phone.GIF" alt="phone" id="phone" /><a
             href="#">123-456-7890</a></footer>
 </body>
+
 </html>
