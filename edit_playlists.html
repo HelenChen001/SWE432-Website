@@ -5,12 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Playlists</title>
     <link rel="stylesheet" href="edit_playlists_styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+        height: 1000px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
   </head>
+
   <body>
     <!-- navigation bar -->
     <nav class="navbar">
       <div id="navbar-left">
-        <img src="images/logo.png" alt="" />
+        <img src="images/logo.png" alt="" style="  width: 30px;
+        height: 100%;"/>
         <h2>TrueCrimeToday</h2>
         <p>ADMIN</p>
       </div>
@@ -30,11 +45,17 @@
       </aside>
       <div id="main-content">
         <h2>Edit DJ's Playlist</h2>
-        <div id="purple-line"></div>
+        <div style="background-color: #5f4bb6;
+        width: 960px;
+        height: 10px;
+        margin-left: 250px;
+        padding-top: 0px;
+        margin-top: 0;"></div>
 
         
         <h3>Current Playlist</h3>
-        <section class = "playlist-section">
+        <section style="  display: flex;
+        flex-direction: row;">
           <div class="playlist-grid">
             <div class="item">Title Author Duration</div>
             <div class="item">Title Author Duration</div>
@@ -51,7 +72,8 @@
           </div>
         </section>
        <div id="search">
-        <img src="images/Search_img.png" alt="">
+        <img src="images/Search_img.png" alt="" style="  width: 50px;
+        height: auto;">
         <input type="text" placeholder="Search for Stories">
        </div>
 
@@ -109,22 +131,21 @@
         <figcaption>DJ Name</figcaption>
 
         <div id="right-aside-info">
-          <h1>DJ Profile</h2>
-          <div id="info-display">
-            <p>TextArea1</p>
+          <h1>DJ Profile</h1>
+          <ul id="info-display">
+            <li>TextArea1</li>
             <hr />
-            <p>TextArea2</p>
+            <li>TextArea2</li>
             <hr />
-            <p>TextArea3</p>
+            <li>TextArea3</li>
             <hr />
-            <p>TextArea4</p>
+            <li>TextArea4</li>
             <hr />
-            <p>TextArea5</p>
+            <li>TextArea5</li>
             <hr />
-            <p>TextArea6</p>
+            <li>TextArea6</li>
             <hr />
-            <p></p>
-          </div>
+          </ul>
         </div>
       </aside>
     </section>

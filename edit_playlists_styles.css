@@ -1,14 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-  height: 1000px;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
 #main-content {
   display: flex;
   flex-direction: column;
@@ -28,18 +17,6 @@ body {
   font-size: 15px;
   margin-left: 250px;
   margin-bottom: 0;
-}
-#purple-line {
-  background-color: #5f4bb6;
-  width: 960px;
-  height: 10px;
-  margin-left: 250px;
-  padding-top: 0px;
-  margin-top: 0;
-}
-.playlist-section {
-  display: flex;
-  flex-direction: row;
 }
 /* playlist styling */
 .playlist-grid {
@@ -94,10 +71,7 @@ body {
   align-items: center;
   height: 50px;
 }
-#search img {
-  width: 50px;
-  height: auto;
-}
+
 #search input {
   background-color: #e9e5e5;
   border: none;
@@ -124,10 +98,6 @@ body {
 }
 #navbar-left * {
   display: inline-block;
-}
-#navbar-left img {
-  width: 30px;
-  height: 100%;
 }
 #navbar-left p {
   font-size: 14px;
@@ -203,16 +173,14 @@ body {
   background-color: #1b1b1e;
   color: white;
   align-items: center;
+  justify-content: center;
   margin-top: 35px;
 }
-#info-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14px;
+#right-aside-info ul {
+  padding: 10px;
 }
-#info-display hr {
-  width: 100%;
+#right-aside-info li {
+  list-style-type: none;
 }
 
 .submit-button {
@@ -255,7 +223,6 @@ body {
   margin-right: 15px;
 }
 
-/* play-order specific styles */
 .time-slot-container {
   display: grid;
   grid-template-columns: repeat(2, 200px);

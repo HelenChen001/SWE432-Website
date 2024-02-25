@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Play Order</title>
     <link rel="stylesheet" href="playorder_playlists_styles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+        height: 900px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
   </head>
   <body>
     <!-- navigation bar -->
@@ -29,100 +42,193 @@
         <a href="edit_playlists.html">Edit Playlists</a>
       </aside>
       <div id="main-content">
-        <h2>DJ's Play Order</h2>
-        <div id="purple-line"></div>
+        <h2
+          style="
+            font-size: 35px;
+            margin-left: 250px;
+            margin-top: 100px;
+            margin-bottom: 0;
+          "
+        >
+          DJ's Play Order
+        </h2>
+        <div
+          style="
+            background-color: #5f4bb6;
+            width: 960px;
+            height: 10px;
+            margin-left: 250px;
+            padding-top: 0px;
+            margin-top: 0;
+          "
+        ></div>
 
-        <h3>Current Playlist</h3>
+        <h3 style="font-size: 15px; margin-left: 250px; margin-bottom: 0">
+          Current Playlist
+        </h3>
 
-        <section class = "playlist-section">
+        <section class="playlist-section">
           <div class="playlist-grid">
-            <div class="item">Title Author Duration</div>
-            <div class="item">Title Author Duration</div>
-            <div class="item">Title Author Duration</div>
-            <div class="item">Title Author Duration</div>
-            <div class="item">Title Author Duration</div>
-            <div class="item">Title Author Duration</div>
+            <div class="item">
+              Title Author Duration
+              <select id="time_options">
+                <option value="">Slot1</option>
+                <option value="">Slot2</option>
+                <option value="">Slot3</option>
+                <option value="">Slot4</option>
+                <option value="">Slot5</option>
+                <option value="">Slot6</option>
+                <option value="">Slot7</option>
+                <option value="">Slot8</option>
+              </select>
+            </div>
+            <div class="item">
+              Title Author Duration
+              <select id="time_options">
+                <option value="">Slot1</option>
+                <option value="">Slot2</option>
+                <option value="">Slot3</option>
+                <option value="">Slot4</option>
+                <option value="">Slot5</option>
+                <option value="">Slot6</option>
+                <option value="">Slot7</option>
+                <option value="">Slot8</option>
+              </select>
+            </div>
+            <div class="item">
+              Title Author Duration
+              <select id="time_options">
+                <option value="">Slot1</option>
+                <option value="">Slot2</option>
+                <option value="">Slot3</option>
+                <option value="">Slot4</option>
+                <option value="">Slot5</option>
+                <option value="">Slot6</option>
+                <option value="">Slot7</option>
+                <option value="">Slot8</option>
+              </select>
+            </div>
+            <div class="item">
+              Title Author Duration
+              <select id="time_options">
+                <option value="">Slot1</option>
+                <option value="">Slot2</option>
+                <option value="">Slot3</option>
+                <option value="">Slot4</option>
+                <option value="">Slot5</option>
+                <option value="">Slot6</option>
+                <option value="">Slot7</option>
+                <option value="">Slot8</option>
+              </select>
+            </div>
+            <div class="item">
+              Title Author Duration
+              <select id="time_options">
+                <option value="">Slot1</option>
+                <option value="">Slot2</option>
+                <option value="">Slot3</option>
+                <option value="">Slot4</option>
+                <option value="">Slot5</option>
+                <option value="">Slot6</option>
+                <option value="">Slot7</option>
+                <option value="">Slot8</option>
+              </select>
+            </div>
+            <div class="item">
+              Title Author Duration
+              <select id="time_options">
+                <option value="">Slot1</option>
+                <option value="">Slot2</option>
+                <option value="">Slot3</option>
+                <option value="">Slot4</option>
+                <option value="">Slot5</option>
+                <option value="">Slot6</option>
+                <option value="">Slot7</option>
+                <option value="">Slot8</option>
+              </select>
+            </div>
+            <button id="save-button">Save Changes</button>
           </div>
-  
-          <div class = "time-slot">
-              <div class="time-slot-container">
-                <div class="grid-item">TimeSlot1</div>
-                <div class="grid-item">TimeSlot2</div>
-                <div class="grid-item">TimeSlot3</div>
-                <div class="grid-item">TimeSlot4</div>
-                <div class="grid-item">TimeSlot5</div>
-                <div class="grid-item">TimeSlot6</div>
-                <div class="grid-item">TimeSlot7</div>
-                <div class="grid-item">TimeSlot8</div>
+
+          <div class="time-slot">
+            <div class="time-slot-container">
+              <div class="grid-item">TimeSlot1</div>
+              <div class="grid-item">TimeSlot2</div>
+              <div class="grid-item">TimeSlot3</div>
+              <div class="grid-item">TimeSlot4</div>
+              <div class="grid-item">TimeSlot5</div>
+              <div class="grid-item">TimeSlot6</div>
+              <div class="grid-item">TimeSlot7</div>
+              <div class="grid-item">TimeSlot8</div>
             </div>
           </div>
         </section>
 
-
-          <div id="search">
-            <img src="images/Search_img.png" alt="">
-            <input type="text" placeholder="Search for DJ's">
-           </div>
-           <div id="search-grid">
-            <div class="search-results">
-              <div class="search-item">
-               <input type="radio">
-                DJ Name and Info</div>
-              <div class="search-item">
-                <input type="radio">
-                DJ Name and Info</div>
-              <div class="search-item">
-                <input type="radio">
-                DJ Name and Info</div>
-              <div class="search-item">
-                  <input type="radio">
-                  DJ Name and Info</div>
-              <div class="search-item">
-                  <input type="radio">
-                  DJ Name and Info</div>
-              <div class="search-item">
-                  <input type="radio">
-                  DJ Name and Info</div>
+        <div id="search">
+          <img src="images/Search_img.png" alt="" />
+          <input type="text" placeholder="Search for DJ's" required />
+        </div>
+        <div id="search-grid">
+          <div class="search-results">
+            <div class="search-item">
+              <input type="radio" />
+              DJ1 Name and Info
+            </div>
+            <div class="search-item">
+              <input type="radio" />
+              DJ2 Name and Info
+            </div>
+            <div class="search-item">
+              <input type="radio" />
+              DJ3 Name and Info
+            </div>
+            <div class="search-item">
+              <input type="radio" />
+              DJ4 Name and Info
+            </div>
+            <div class="search-item">
+              <input type="radio" />
+              DJ5 Name and Info
+            </div>
+            <div class="search-item">
+              <input type="radio" />
+              DJ6 Name and Info
+            </div>
           </div>
-        
-       </div>
-       <button class="submit-button">Submit</button>
-      
+        </div>
+        <button class="submit-button">Submit</button>
       </div>
       <aside class="sidebar aside-right">
         <img src="images/dj.jpg" alt="" />
         <figcaption>DJ Name</figcaption>
 
         <div id="right-aside-info">
-          <h1>DJ Profile</h2>
-          <div id="info-display">
-            <p>TextArea1</p>
+          <h1>DJ Profile</h1>
+          <ul id="info-display">
+            <li>TextArea1</li>
             <hr />
-            <p>TextArea2</p>
+            <li>TextArea2</li>
             <hr />
-            <p>TextArea3</p>
+            <li>TextArea3</li>
             <hr />
-            <p>TextArea4</p>
+            <li>TextArea4</li>
             <hr />
-            <p>TextArea5</p>
+            <li>TextArea5</li>
             <hr />
-            <p>TextArea6</p>
+            <li>TextArea6</li>
             <hr />
-            <p></p>
-          </div>
+          </ul>
         </div>
       </aside>
     </section>
 
     <!-- footer -->
     <footer class="footer">
-    
       <p>Contact Us</p>
-      <img src="images/email.png" alt="">
+      <img src="images/email.png" alt="" />
       <p>SampleEmail@gmail.com</p>
-      <img src="images/phone.png" alt="">
+      <img src="images/phone.png" alt="" />
       <p>123-456-789</p>
-     
     </footer>
   </body>
 </html>
