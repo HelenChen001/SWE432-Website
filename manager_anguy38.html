@@ -85,15 +85,20 @@
                     </figure>
                 </div>
                 <div id="timeslots">
-                    <button class="timeslot" data-time="9:00 AM">9:00 AM</button>
-                    <button class="timeslot" data-time="10:00 AM">10:00 AM</button>
-                    <button class="timeslot" data-time="11:00 AM">11:00 AM</button>
-                    <button class="timeslot" data-time="1:00 PM">1:00 PM</button>
-                    <button class="timeslot" data-time="2:00 PM">2:00 PM</button>
-                    <button class="timeslot" data-time="3:00 PM">3:00 PM</button>
-                    <button class="timeslot" data-time="4:00 PM">4:00 PM</button>
-                    <button class="timeslot" data-time="5:00 PM">5:00 PM</button>
-                </div>                
+                    <div class = "first-col">
+                    <label class="timeslot"><input type="checkbox" value="9:00 AM">9:00 AM</label>
+                    <label class="timeslot"><input type="checkbox" value="10:00 AM">10:00 AM</label>
+                    <label class="timeslot"><input type="checkbox" value="11:00 AM">11:00 AM</label>
+                    <label class="timeslot"><input type="checkbox" value="1:00 PM">1:00 PM</label>
+                    </div>
+                    <div class = "second-col">
+                    <label class="timeslot"><input type="checkbox" value="2:00 PM">2:00 PM</label>
+                    <label class="timeslot"><input type="checkbox" value="3:00 PM">3:00 PM</label>
+                    <label class="timeslot"><input type="checkbox" value="4:00 PM">4:00 PM</label>
+                    <label class="timeslot"><input type="checkbox" value="5:00 PM">5:00 PM</label>
+                    </div>
+                </div>
+                           
             </form>
             <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Select DJ</div>
             <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" /><input type="text"
@@ -103,31 +108,31 @@
                 <div class="radio-group">
                     <form>
                         <div>
-                            <input type="radio" id="dj1" name="dj" value="DJ Electro">
+                            <input type="radio" id="dj1" name="dj" value="DJ Electro" required>
                             <label for="dj1">DJ Electro</label>
                         </div>
                         <div>
-                            <input type="radio" id="dj2" name="dj" value="DJ Mixmaster">
+                            <input type="radio" id="dj2" name="dj" value="DJ Mixmaster" required>
                             <label for="dj2">DJ Mixmaster</label>
                         </div>
                 </div>
                 <div class="radio-group">
                     <div>
-                        <input type="radio" id="dj3" name="dj" value="DJ Spintronix">
+                        <input type="radio" id="dj3" name="dj" value="DJ Spintronix" required>
                         <label for="dj3">DJ Spintronix</label>
                     </div>
                     <div>
-                        <input type="radio" id="dj4" name="dj" value="DJ Groovebox">
+                        <input type="radio" id="dj4" name="dj" value="DJ Groovebox" required>
                         <label for="dj4">DJ Groovebox</label>
                     </div>
                 </div>
                 <div class="radio-group">
                     <div>
-                        <input type="radio" id="dj5" name="dj" value="DJ Bassline">
+                        <input type="radio" id="dj5" name="dj" value="DJ Bassline" required>
                         <label for="dj5">DJ Bassline</label>
                     </div>
                     <div>
-                        <input type="radio" id="dj6" name="dj" value="DJ Beatmaster">
+                        <input type="radio" id="dj6" name="dj" value="DJ Beatmaster" required>
                         <label for="dj6">DJ Beatmaster</label>
                     </div>
                 </div>
