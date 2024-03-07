@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>DJ Screen</title>
 	<link rel="stylesheet" href="dj_hchen37.css">
+	<script src="dj_hchen37.js"></script>
 	<style>
 		body{
 			background-color: #1b1b1e;
@@ -29,6 +30,19 @@
 			height: 40px;
 			right: 560px;
 		}
+		#newButton, #removeButton{
+			background-color: #5f4bb6;
+			color: white;
+			padding: 10px;
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			border: 1px solid #5f4bb6;
+			box-sizing: border-box;
+			width: 100%; /* Make the button take 100% width of its container */
+			cursor: pointer; /* Add a pointer cursor for better UX */
+			margin-bottom: 20px;
+			border-radius: 5px;
+		}
 
 	</style>
 </head>
@@ -53,18 +67,18 @@
 		<div class="RadioContainer">
 			<img src="Images/podcast.png" alt="">
 			<!--Form-->
-			<form action="">
+			<form action="" id="myForm" onsubmit="return validateForm()">
 			<div id="RadioGrid">
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot1" name="timeSlot">Time Slot 1</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot2" name="timeSlot">Time Slot 2</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot3" name="timeSlot">Time Slot 3</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot4" name="timeSlot">Time Slot 4</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot5" name="timeSlot">Time Slot 5</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot6" name="timeSlot">Time Slot 6</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot7" name="timeSlot">Time Slot 7</label>
-				<label for="timeSlot1"><input type="checkbox" id="timeSlot8" name="timeSlot">Time Slot 8</label>
+				<label for="timeSlot1"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 1</label>
+				<label for="timeSlot2"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 2</label>
+				<label for="timeSlot3"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 3</label>
+				<label for="timeSlot4"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 4</label>
+				<label for="timeSlot5"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 5</label>
+				<label for="timeSlot6"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 6</label>
+				<label for="timeSlot7"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 7</label>
+				<label for="timeSlot8"><input type="checkbox" id="timeSlot" name="timeSlot">Time Slot 8</label>
 			</div>
-			<button id="formSelectAll">Select All</button>
+			<button id="formSelectAll" type="button" onclick="selectAllCheckboxes()">Select All</button>
 			<button id="formSubmit" type="submit">Submit</button>
 			
 			</form>
@@ -95,7 +109,7 @@
 					</select>
 				</div>
 				<div class="addButtonColumn">
-					<button>Add</button>
+					<button onclick="alert('Add Button has been clicked!')">Add</button>
 				</div>
 				<!--Second row-->
 				<img src="Images/dj.jpg" alt="">
@@ -115,7 +129,7 @@
 					</select>
 				</div>
 				<div class="addButtonColumn">
-					<button>Add</button>
+					<button onclick="alert('Add Button has been clicked!')">Add</button>
 				</div>
 				<!--Third-->
 				<img src="Images/dj.jpg" alt="">
@@ -171,6 +185,8 @@
 		<div class="playlistBtn"><button>Saved Playlist 1</button></div>
 		<div class="playlistBtn"><button>Saved Playlist 2</button></div>
 		<div class="playlistBtn"><button>Saved Playlist 3</button></div>
+		<button id="newButton">Add new button</button>
+		<button id="removeButton">Remove New Button</button>
 	</aside>
 
 	<aside id="rightBar">
