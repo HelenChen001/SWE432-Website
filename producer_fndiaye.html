@@ -18,6 +18,10 @@
         display: flex;
         flex-wrap: wrap;
       }
+      .aside-left div:nth-child(2) {
+        border: 2px solid #5f4bb6;
+        background-color: white;
+      }
     </style>
   </head>
   <body>
@@ -30,7 +34,7 @@
       </div>
       <div id="navbar-right">
         <a href="manager_anguy38.html">Manager</a>
-        <a href="#">Producer</a>
+        <a id="producer-nav-tab" href="#">Producer</a>
         <a href="dj_hchen37.html">DJ</a>
       </div>
     </nav>
@@ -39,8 +43,12 @@
     <section class="container">
       <aside class="sidebar aside-left">
         <h2>Tools</h2>
-        <a href="producer_fndiaye.html">Play Order</a>
-        <a href="producer2_fndiaye.html">Edit Playlists</a>
+        <div class="aside-tool">
+          <a id="play-order-tool" href="producer_fndiaye.html">Play Order</a>
+        </div>
+        <div class="aside-tool">
+          <a href="producer2_fndiaye.html">Edit Playlists</a>
+        </div>
       </aside>
       <div class="main-content page1-content">
         <h2>DJ's Play Order</h2>
@@ -58,10 +66,10 @@
         <h3>Current Playlist</h3>
 
         <section class="playlist-section">
-          <div class="playlist-grid">
+          <form class="playlist-grid">
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
                 <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
@@ -75,7 +83,7 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
                 <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
@@ -89,7 +97,7 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
                 <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
@@ -103,7 +111,7 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
                 <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
@@ -117,7 +125,7 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
                 <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
@@ -131,7 +139,7 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
                 <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
@@ -143,10 +151,8 @@
                 <option value="">Slot8</option>
               </select>
             </div>
-            <button onclick="alert('Playlist Saved')" id="save-button">
-              Save Changes
-            </button>
-          </div>
+            <button id="save-button">Save Changes</button>
+          </form>
 
           <div class="time-slot">
             <div class="time-slot-container">
@@ -162,7 +168,7 @@
           </div>
         </section>
 
-        <div id="search">
+        <div class="search">
           <img src="images/Search_img.png" alt="" />
           <input type="text" placeholder="Search for DJ's" required />
         </div>
@@ -194,7 +200,12 @@
             </div>
           </div>
         </div>
-        <button class="submit-button">Submit</button>
+        <button
+          onclick="alert('Changes have been saved!')"
+          class="submit-button"
+        >
+          Submit
+        </button>
       </div>
       <aside class="sidebar aside-right">
         <img src="images/dj.jpg" alt="" />

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Playlists</title>
     <link rel="stylesheet" href="producer_fndiaye_styles.css" />
+    <script src="producer_fndiaye.js"></script>
     <style>
       body {
         margin: 0;
@@ -16,6 +17,10 @@
       .container {
         display: flex;
         flex-wrap: wrap;
+      }
+      .aside-left div:nth-child(3) {
+        border: 2px solid #5f4bb6;
+        background-color: white;
       }
     </style>
   </head>
@@ -31,7 +36,7 @@
       </div>
       <div id="navbar-right">
         <a href="manager_anguy38.html">Manager</a>
-        <a href="producer_fndiaye.html">Producer</a>
+        <a id="producer-nav-tab" href="producer_fndiaye.html">Producer</a>
         <a href="#dj_hchen37.html">DJ</a>
       </div>
     </nav>
@@ -40,8 +45,12 @@
     <section class="container">
       <aside class="sidebar aside-left">
         <h2>Tools</h2>
-        <a href="producer_fndiaye.html">Play Order</a>
-        <a href="#">Edit Playlists</a>
+        <div class="aside-tool">
+          <a href="producer_fndiaye.html">Play Order</a>
+        </div>
+        <div class="aside-tool">
+          <a href="producer2_fndiaye.html">Edit Playlists</a>
+        </div>
       </aside>
       <div class="main-content page2-content">
         <h2>Edit DJ's Playlist</h2>
@@ -57,12 +66,12 @@
         <section style="  display: flex;
         flex-direction: row;">
           <div class="playlist-grid">
-            <div class="playlist-item page2">Title Author Duration</div>
-            <div class="playlist-item page2">Title Author Duration</div>
-            <div class="playlist-item page2">Title Author Duration</div>
-            <div class="playlist-item page2">Title Author Duration</div>
-            <div class="playlist-item page2">Title Author Duration</div>
-            <div class="playlist-item page2">Title Author Duration</div>
+            <div class="playlist-item page2"><img src="" alt=""></div>
+            <div class="playlist-item page2"><img src="" alt=""></div>
+            <div class="playlist-item page2"><img src="" alt=""></div>
+            <div class="playlist-item page2"><img src="" alt=""></div>
+            <div class="playlist-item page2"><img src="" alt=""></div>
+            <div class="playlist-item page2"><img src="" alt=""></div>
           </div>
   
           <div class = "edit-section">  
@@ -71,7 +80,7 @@
               <button>Delete Stories</button>
           </div>
         </section>
-       <div id="search">
+       <div class="search">
         <img src="images/Search_img.png" alt="">
         <input type="text" placeholder="Search for Stories">
        </div>
@@ -119,7 +128,7 @@
        
 
       </div>
-      <button class="submit-button">Submit</button>
+      <button onclick="alert('Changes have been saved!')"class="submit-button">Submit</button>
        
    </div>
 
