@@ -170,46 +170,43 @@
 
         <div class="search">
           <img src="images/Search_img.png" alt="" />
-          <input type="text" placeholder="Search for DJ's" required />
+          <input type="text" placeholder="Search for DJ's" />
         </div>
         <div id="search-grid">
-          <div class="dj-search-results">
+          <form class="dj-search-results">
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ1 Name and Info" />
               DJ1 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ2 Name and Info" />
               DJ2 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ3 Name and Info" />
               DJ3 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ4 Name and Info" />
               DJ4 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ5 Name and Info" />
               DJ5 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ6 Name and Info" />
               DJ6 Name and Info
             </div>
-          </div>
+          </form>
         </div>
-        <button
-          onclick="alert('Changes have been saved!')"
-          class="submit-button"
-        >
+        <button type="submit" class="submit-button submit-play-form">
           Submit
         </button>
       </div>
       <aside class="sidebar aside-right">
         <img src="images/dj.jpg" alt="" />
-        <figcaption>DJ Name</figcaption>
+        <figcaption id="side_dj">DJ Name</figcaption>
 
         <div id="right-aside-info">
           <h1>DJ Profile</h1>

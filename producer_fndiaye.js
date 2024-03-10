@@ -1,10 +1,11 @@
 window.onload = function () {
   console.log("Window.onload: Page is fully loaded!");
 
-  //   setTimeout(function () {
-  //     console.log("Delayed Message for 2 sections");
-  //   }, 2000);
+  setTimeout(function () {
+    console.log("Delayed Message for 2 sections");
+  }, 2000);
 
+  // class for a story in the playlist
   class Story {
     constructor(title, author, genre, duration) {
       this.title = title;
@@ -41,7 +42,7 @@ window.onload = function () {
       );
     }
   }
-
+  //creating story objects
   let story_one = new Story(
     "The Crimson Cipher",
     "Evelyn Blackwood",
@@ -55,7 +56,7 @@ window.onload = function () {
     "1:19:21"
   );
 
-  // logging
+  // logging the first story
   console.log("Properties of Story One");
   log_story_objects(
     story_one.title,
@@ -82,7 +83,7 @@ window.onload = function () {
     story_one.duration,
     story_one.time_slot
   );
-
+  // if either genre is fictional narrative, log
   if (
     story_one.genre == "Fictional Narrative" ||
     story_two.genre == "Fictional Narrative"
@@ -95,6 +96,8 @@ window.onload = function () {
         " is Fictional Narrative."
     );
   }
+  // log the second story
+  console.log("Properties of Story Two");
   log_story_objects(
     story_two.title,
     story_two.author,
@@ -103,6 +106,7 @@ window.onload = function () {
     story_two.time_slot
   );
 
+  // if story two doesnt have a time_slot property
   if (story_two.time_slot == null) {
     story_two.time_slot = "1pm - 3pm";
     console.log("New Properties of Story Two");
@@ -113,21 +117,25 @@ window.onload = function () {
       story_two.duration,
       story_two.time_slot
     );
-  } else if (story_two.time_slot == story_one.time_slot) {
+  }
+  // if story one and two have the same time slot
+  else if (story_two.time_slot == story_one.time_slot) {
     console.log(
       story_one + " and " + story_two + " air from " + story_one.time_slot
     );
   } else {
     console.log(story_two + " airs from " + story_two.time_slot);
   }
+};
 
+document.addEventListener("DOMContentLoaded", function () {
   // changing the color of the producer tab in the navbar
   let producer_tab = document.getElementById("producer-nav-tab");
   producer_tab.style.background =
     "linear-gradient(to bottom, #5f4bb6, #f7f5fb)";
   producer_tab.style.padding = "5px";
 
-  // FORM VALIDATION
+  // EDIT PLAYLIST - FORM VALIDATION
   const saveButton = document.getElementById("save-button");
 
   // getting all the dropdowns
@@ -147,7 +155,7 @@ window.onload = function () {
       formChanged = true;
     });
   });
-
+  // save button for playlist dropdown
   if (saveButton) {
     // checking if the save button was clicked
     saveButton.addEventListener("click", function (event) {
@@ -159,7 +167,6 @@ window.onload = function () {
       }
       // add changes to database... to be implemented
       alert("Playlist saved!");
-      window.location.reload();
     });
   }
 
@@ -171,17 +178,58 @@ window.onload = function () {
       // Check if the pressed key is Enter
       if (event.key === "Enter") {
         console.log("Enter key pressed in search input");
-
         // search function for dj entered
         performSearch(search.value);
       }
     });
+  }
+  const side_dj = document.getElementById("side_dj");
+  let checked = false;
+  let selected_dj = "";
+  let selected_radio_button = document.createElement("input");
+  selected_radio_button.setAttribute("type", "radio");
 
-    // Function to perform search -- to be implemented
-    function performSearch(query) {
-      alert("Performing search for: " + query);
-      // look for dj in database
+  // Function to perform search -- to be implemented
+  function performSearch(query) {
+    let checked = false;
+    alert("Performing search for: " + query);
+    // look for dj in radio button portion
+    const search_results = document.querySelectorAll(
+      '.dj-search-item input[type="radio"]'
+    );
+
+    if (search_results) {
+      search_results.forEach(function (item) {
+        // select the button if its what the user was searching for
+        if (item.value == query) {
+          item.checked = true;
+          checked = true;
+          selected_dj = item.value;
+          selected_radio_button = item;
+        }
+      });
     }
+
+    if (checked == false) {
+      alert("Dj not found!");
+    }
+  }
+  // event listener for radio buttons
+  // look for dj in radio button portion
+  const search_results = document.querySelectorAll(
+    '.dj-search-item input[type="radio"]'
+  );
+  if (search_results) {
+    search_results.forEach(function (item) {
+      item.addEventListener("click", function () {
+        // Check if the radio button is selected
+        if (item.checked) {
+          checked = true;
+          selected_dj = item.value;
+          console.log(selected_dj);
+        }
+      });
+    });
   }
 
   const currentPlaylist = document.querySelectorAll(".playlist-item.page2");
@@ -240,15 +288,31 @@ window.onload = function () {
       });
       // event listener for clicking the add to playlist button
       secondButton.addEventListener("click", function () {
-        alert(
-          "Delete Stories Button Clicked! Click on an entry in the playlist to delete it "
-        );
-
-        delete_from_playlists();
+        // check if the playlist is empty first
+        if (playlist_empty() == true) {
+          alert("Playlist is Empty!");
+        } else {
+          alert(
+            "Delete Stories Button Clicked! Click on an entry in the playlist to delete it "
+          );
+          delete_from_playlists();
+        }
       });
     }
   }
 
+  // function to check if the playlist is empty
+  function playlist_empty() {
+    let flag = true;
+    for (let i = 0; i < currentPlaylist.length; ++i) {
+      if (currentPlaylist[i].textContent != "") {
+        flag = false;
+        return flag;
+      }
+    }
+    return flag;
+  }
+  // function to add to the playlist
   function add_to_playlist(searchResults) {
     let text = searchResults.querySelector("h5").textContent;
 
@@ -262,9 +326,9 @@ window.onload = function () {
       }
     }
   }
-
+  // function to delete from the playlist
   function delete_from_playlists() {
-    currentPlaylist.forEach(function (item, index) {
+    currentPlaylist.forEach(function (item) {
       // if the entry is not empty
       if (item.textContent != "") {
         // make the deleting image appear
@@ -291,4 +355,24 @@ window.onload = function () {
     });
     console.log(currentPlaylist);
   }
-};
+
+  // form validation for play order page
+  function validateForm() {
+    const submitPlayOrderButton = document.querySelector(".submit-play-form");
+    console.log(submitPlayOrderButton);
+    if (submitPlayOrderButton) {
+      submitPlayOrderButton.addEventListener("click", function () {
+        // see if the dj has been selected
+        if (side_dj.textContent == "DJ Name" && checked == false) {
+          alert("Must Select a DJ!");
+        } else {
+          side_dj.textContent = selected_dj;
+          console.log("selected_radio_button:", selected_radio_button);
+          selected_radio_button.checked = false;
+          alert("Changes Saved!");
+        }
+      });
+    }
+  }
+  validateForm();
+});
