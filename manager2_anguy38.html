@@ -40,6 +40,7 @@
             outline: none;
         }
     </style>
+    <script src="manager_anguy38.js"></script>
 </head>
 
 <body>
@@ -66,7 +67,7 @@
         </aside>
 
         <aside class="sidebar" id="right-sidebar">
-            <!-- Content for the second aside -->
+            <!-- Content for the second aside
             <header>
                 <h1>DJ Profile</h1>
                 <figure>
@@ -84,70 +85,79 @@
             </article>
             <article id="black-box">
                 More information
-            </article>
+            </article> -->
         </aside>
         <section id="main-section">
-            <div>
-                <p id="main-section-title">Get Report</p>
-            </div>
-            <div id="purple-line"></div>
-            <form class="grid-time">
-                <div id="input-date">
-                    <label for="start" style="font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Select Date
-                        and Timeslots</label>
-                    <input type="date" id="start" name="trip-start" value="2024-07-22" min="2024-01-01" required />
-                    <figure><img src="images/calendar.png" alt="email" id="calendar" />
-                        <figcaption>Calendar</figcaption>
-                    </figure>
+            <form id = "Report">
+                <div>
+                    <p id="main-section-title">Get Report</p>
                 </div>
-                <div id="timeslots">
-                    <div class = "first-col">
-                    <label class="timeslot"><input type="radio" value="9:00 AM">9:00 AM</label>
-                    <label class="timeslot"><input type="radio" value="10:00 AM">10:00 AM</label>
-                    <label class="timeslot"><input type="radio" value="11:00 AM">11:00 AM</label>
-                    <label class="timeslot"><input type="radio" value="1:00 PM">1:00 PM</label>
+                <div id="purple-line"></div>
+                <div class="grid-time">
+                    <div id="input-date">
+                        <label id = "1" for="start" style="font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Select
+                            Date
+                            and Timeslots</label>
+                        <input type="date" id="date" name="trip-start" min="" max = "" required />
+                        <figure><img src="images/calendar.png" alt="email" id="calendar" />
+                            <figcaption>Calendar</figcaption>
+                        </figure>
                     </div>
-                    <div class = "second-col">
-                    <label class="timeslot"><input type="radio" value="2:00 PM">2:00 PM</label>
-                    <label class="timeslot"><input type="radio" value="3:00 PM">3:00 PM</label>
-                    <label class="timeslot"><input type="radio" value="4:00 PM">4:00 PM</label>
-                    <label class="timeslot"><input type="radio" value="5:00 PM">5:00 PM</label>
+                    <div id="timeslots">
+                        <div class="first-col">
+                            <label class="timeslot"><input type="radio" name = "1" value="9:00 AM" required>9:00 AM</label>
+                            <label class="timeslot"><input type="radio" name = "1" value="10:00 AM" required>10:00 AM</label>
+                            <label class="timeslot"><input type="radio" name = "1" value="11:00 AM" required>11:00 AM</label>
+                            <label class="timeslot"><input type="radio" name = "1" value="1:00 PM" required>1:00 PM</label>
+                        </div>
+                        <div class="second-col">
+                            <label class="timeslot"><input type="radio" name = "1" value="2:00 PM" >2:00 PM</label>
+                            <label class="timeslot"><input type="radio" name = "1" value="3:00 PM" >3:00 PM</label>
+                            <label class="timeslot"><input type="radio" name = "1" value="4:00 PM" >4:00 PM</label>
+                            <label class="timeslot"><input type="radio" name = "1" value="5:00 PM" >5:00 PM</label>
+                        </div>
                     </div>
                 </div>
-            </form>
-            <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Report Below</div>
-            <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" /><input type="text"
-                    placeholder="Search for Names" id="search-input">
-            </div>
-            <div id="dj">
-                <div class="radio-group" style="padding: 0px;">
+                <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Report Below
+                </div>
+                <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" /><input type="text"
+                        placeholder="Search for Names" id="search-input">
+                </div>
+                <div id="dj">
+                    <div class="radio-group" style="padding: 0px;">
+                        <div class="songs">
+                            <h3>DJ Songs</h3>
+                            <ul>
+                                <li>Song #1</li>
+                                <li>Song #2</li>
+                                <li>Song #3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vl"></div>
                     <div class="songs">
-                        <h3>DJ Songs</h3>
-                        <ul>
-                            <li>Song #1</li>
-                            <li>Song #2</li>
-                            <li>Song #3</li>
-                        </ul>
+                        <div>
+                            <h3>Producer Songs</h3>
+                            <ul>
+                                <li>Song #1</li>
+                                <li>Song #2</li>
+                                <li>Song #3</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="vl"></div>
-                <div class="songs">
-                    <div>
-                        <h3>Producer Songs</h3>
-                        <ul>
-                            <li>Song #1</li>
-                            <li>Song #2</li>
-                            <li>Song #3</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <input type="submit" value="Submit">
+                </div> 
+                <input id = "submit2" type="submit" value="Submit" onmousedown="this.style.backgroundColor = 'purple'"
+                    onmouseup="this.style.backgroundColor = '#5F4BB6'">
+            </form>
         </section>
     </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span id="popup-message">Your message here</span>
+        </div>
+      </div>
     <footer id="footer"><i>Contact Us</i><img src="images/email.GIF" alt="email" id="email" /><a
             href="#">SampleEmail@gmail.com</a><img src="images/phone.GIF" alt="phone" id="phone" /><a
             href="#">123-456-7890</a></footer>
 </body>
-
 </html>

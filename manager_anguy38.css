@@ -232,6 +232,11 @@ figure {
     margin-bottom: 10px;
 }
 
+.radio-group div label:hover{
+    color: blueviolet;
+    cursor: pointer;
+}
+
 .radio-group {
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -306,3 +311,20 @@ input[type="submit"] {
     left: -60px;
     margin-bottom: 10px;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
