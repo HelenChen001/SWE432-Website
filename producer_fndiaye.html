@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Play Order</title>
     <link rel="stylesheet" href="producer_fndiaye_styles.css" />
+    <script src="producer_fndiaye.js"></script>
     <style>
       body {
         margin: 0;
@@ -16,6 +17,10 @@
       .container {
         display: flex;
         flex-wrap: wrap;
+      }
+      .aside-left div:nth-child(2) {
+        border: 2px solid #5f4bb6;
+        background-color: white;
       }
     </style>
   </head>
@@ -29,7 +34,7 @@
       </div>
       <div id="navbar-right">
         <a href="manager_anguy38.html">Manager</a>
-        <a href="#">Producer</a>
+        <a id="producer-nav-tab" href="#">Producer</a>
         <a href="dj_hchen37.html">DJ</a>
       </div>
     </nav>
@@ -38,8 +43,12 @@
     <section class="container">
       <aside class="sidebar aside-left">
         <h2>Tools</h2>
-        <a href="producer_fndiaye.html">Play Order</a>
-        <a href="producer2_fndiaye.html">Edit Playlists</a>
+        <div class="aside-tool">
+          <a id="play-order-tool" href="producer_fndiaye.html">Play Order</a>
+        </div>
+        <div class="aside-tool">
+          <a href="producer2_fndiaye.html">Edit Playlists</a>
+        </div>
       </aside>
       <div class="main-content page1-content">
         <h2>DJ's Play Order</h2>
@@ -57,10 +66,11 @@
         <h3>Current Playlist</h3>
 
         <section class="playlist-section">
-          <div class="playlist-grid">
+          <form class="playlist-grid">
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
+                <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
                 <option value="">Slot3</option>
@@ -73,7 +83,8 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
+                <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
                 <option value="">Slot3</option>
@@ -86,7 +97,8 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
+                <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
                 <option value="">Slot3</option>
@@ -99,7 +111,8 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
+                <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
                 <option value="">Slot3</option>
@@ -112,7 +125,8 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
+                <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
                 <option value="">Slot3</option>
@@ -125,7 +139,8 @@
             </div>
             <div class="playlist-item page1">
               Title Author Duration
-              <select id="time_options">
+              <select class="time_options">
+                <option value=""></option>
                 <option value="">Slot1</option>
                 <option value="">Slot2</option>
                 <option value="">Slot3</option>
@@ -137,7 +152,7 @@
               </select>
             </div>
             <button id="save-button">Save Changes</button>
-          </div>
+          </form>
 
           <div class="time-slot">
             <div class="time-slot-container">
@@ -153,43 +168,45 @@
           </div>
         </section>
 
-        <div id="search">
+        <div class="search">
           <img src="images/Search_img.png" alt="" />
-          <input type="text" placeholder="Search for DJ's" required />
+          <input type="text" placeholder="Search for DJ's" />
         </div>
         <div id="search-grid">
-          <div class="dj-search-results">
+          <form class="dj-search-results">
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ1 Name and Info" />
               DJ1 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ2 Name and Info" />
               DJ2 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ3 Name and Info" />
               DJ3 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ4 Name and Info" />
               DJ4 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ5 Name and Info" />
               DJ5 Name and Info
             </div>
             <div class="dj-search-item">
-              <input type="radio" />
+              <input type="radio" name="dj" value="DJ6 Name and Info" />
               DJ6 Name and Info
             </div>
-          </div>
+          </form>
         </div>
-        <button class="submit-button">Submit</button>
+        <button type="submit" class="submit-button submit-play-form">
+          Submit
+        </button>
       </div>
       <aside class="sidebar aside-right">
         <img src="images/dj.jpg" alt="" />
-        <figcaption>DJ Name</figcaption>
+        <figcaption id="side_dj">DJ Name</figcaption>
 
         <div id="right-aside-info">
           <h1>DJ Profile</h1>
