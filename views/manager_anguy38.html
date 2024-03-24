@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueCrimeToday Admin</title>
+    <link rel="stylesheet" href="manager_anguy38.css">
+    <style>
+        #left-sidebar div:nth-child(2) {
+            border: 2px solid #5f4bb6;
+            background-color: white;
+        }
+
+        #search-input {
+            width: 95%;
+            font-size: 15px;
+            border: #D9D9D9;
+            background-color: #D9D9D9;
+            color: black;
+
+        }
+
+        #search-input:focus {
+            outline: none;
+        }
+    </style>
+    <script src="manager_anguy38.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <img src="images/logo2.png" alt="logo" id="logo" />
+        <p>TrueCrimeToday</p>
+        <div id="Admin">ADMIN</div>
+        <ul>
+            <li><a href="#" style="background: linear-gradient(rgb(95, 75, 182), rgb(247, 245, 251));
+                padding: 5px;">Manager</a></li>
+            <li><a href="producer_fndiaye.html">Producer</a></li>
+            <li><a href="dj_hchen37.html">DJ</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid" class="flex">
+        <!-- Your content goes here -->
+        <aside class="sidebar" id="left-sidebar">
+            <!-- Content for the first aside -->
+            <h1>Tools</h1>
+            <div><a href="manager_anguy38.html">Schedule</a><br></div>
+            <div><a href="manager2_anguy38.html">Report</a></div>
+        </aside>
+
+        <aside class="sidebar" id="right-sidebar">
+            <!-- Content for the second aside -->
+            <header>
+                <h1>DJ Profile</h1>
+                <figure>
+                    <img src="images/dj_image.avif" alt="dj-image" id="dj-image" />
+                    <figcaption>Photo</figcaption>
+                </figure>
+                <h3>
+                    DJ Electro
+                </h3>
+            </header>
+            <article style="font-size: 12px; text-align: left;margin-bottom: 10px;">
+                Name: DJ Electro<br>
+                Years of Experience: 10 years<br>
+                Genre: Electronic Dance Music (EDM), Electro, Techno<br>
+            </article>
+            <article id="black-box">
+                More information
+            </article>
+        </aside>
+        <section id="main-section">
+            <form id = "Schedule">
+                <div>
+                    <p id="main-section-title">Schedule Assignment</p>
+                </div>
+                <div id="purple-line"></div>
+                <div class="grid-time">
+                    <div id="input-date">
+                        <label for="start" style="font-size: 20px;font-family: Arial, Helvetica, sans-serif;">Select
+                            Date
+                            and Timeslots</label>
+                        <input type="date" id="date" name="trip-start" min="" max = "" required />
+                        <figure><img src="images/calendar.png" alt="email" id="calendar" />
+                            <figcaption>Calendar</figcaption>
+                        </figure>
+                    </div>
+                    <div id="timeslots">
+                        <div class="first-col">
+                            <label class="timeslot"><input type="checkbox" value="9:00 AM">9:00 AM</label>
+                            <label class="timeslot"><input type="checkbox" value="10:00 AM">10:00 AM</label>
+                            <label class="timeslot"><input type="checkbox" value="11:00 AM">11:00 AM</label>
+                            <label class="timeslot"><input type="checkbox" value="1:00 PM">1:00 PM</label>
+                        </div>
+                        <div class="second-col">
+                            <label class="timeslot"><input type="checkbox" value="2:00 PM">2:00 PM</label>
+                            <label class="timeslot"><input type="checkbox" value="3:00 PM">3:00 PM</label>
+                            <label class="timeslot"><input type="checkbox" value="4:00 PM">4:00 PM</label>
+                            <label class="timeslot"><input type="checkbox" value="5:00 PM">5:00 PM</label>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="font-size: 20px;font-family: Arial, Helvetica, sans-serif; margin-top: 25px;">Select DJ
+                </div>
+                <div id="search-bar"><img src="images/Search_img.png" alt="Search" id="Search" /><input type="text"
+                        placeholder="Search for Names" id="search-input">
+                </div>
+                <div id="dj" style="text-decoration: underline;">
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="dj1" name="dj" class = "dj" data-index="0" value="Detective Jackson" required>
+                            <label for="dj1">Detective Jackson</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dj2" name="dj" class = "dj" data-index="1" value="Investigator Smith" required>
+                            <label for="dj2">Investigator Smith</label>
+                        </div>
+                    </div>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="dj3" name="dj" class = "dj" data-index="2" value="Agent Thompson" required>
+                            <label for="dj3">Agent Thompson</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dj4" name="dj" class = "dj" data-index="3" value="Profiler Williams" required>
+                            <label for="dj4">Profiler Williams</label>
+                        </div>
+                    </div>
+                    <div class="radio-group">
+                        <div>
+                            <input type="radio" id="dj5" name="dj" class = "dj" data-index="4" value="FBI Agent Rodriguez" required>
+                            <label for="dj5">FBI Agent Rodriguez</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dj6" name="dj" class = "dj" data-index="5" value="Detective Sanchez" required>
+                            <label for="dj6">Detective Sanchez</label>
+                        </div>
+                    </div>
+                </div>
+                <input id = "submit1" type="submit" value="Submit" onmousedown="this.style.backgroundColor = 'purple'"
+                    onmouseup="this.style.backgroundColor = '#5F4BB6'">
+            </form>
+        </section>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+          <span id="popup-message">Your message here</span>
+        </div>
+      </div>
+    <footer id="footer"><i>Contact Us</i><img src="images/email.GIF" alt="email" id="email" /><a
+            href="#">SampleEmail@gmail.com</a><img src="images/phone.GIF" alt="phone" id="phone" /><a
+            href="#">123-456-7890</a></footer>
+</body>
+
+</html>
