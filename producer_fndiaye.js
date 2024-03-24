@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
   dropdowns.forEach(function (dropdown, index) {
     // checking for changes
     dropdown.addEventListener("change", function () {
-      console.log("here");
       formChanged = true;
     });
   });
@@ -226,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (item.checked) {
           checked = true;
           selected_dj = item.value;
-          console.log(selected_dj);
         }
       });
     });
@@ -348,18 +346,16 @@ document.addEventListener("DOMContentLoaded", function () {
           if (pElement.textContent != "") {
             pElement.remove();
             image.style.visibility = "hidden";
-            console.log(item);
           }
         });
       }
     });
-    console.log(currentPlaylist);
   }
 
   // form validation for play order page
   function validateForm() {
     const submitPlayOrderButton = document.querySelector(".submit-play-form");
-    console.log(submitPlayOrderButton);
+
     if (submitPlayOrderButton) {
       submitPlayOrderButton.addEventListener("click", function () {
         // see if the dj has been selected
