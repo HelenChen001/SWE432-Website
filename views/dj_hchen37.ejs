@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>DJ Screen | <%= newTitle%></title>
-    <%- include("./partials/dj_partials/dj_head")%>
-  </head>
-  <body>
-    <header id="pageHeader">
-      <%- include('./partials/dj_partials/dj_header')%>
-    </header>
+<head>
+	<title>DJ Screen | <%=  newTitle%></title>
+	<%- include("./partials/dj_partials/dj_head")%>
+</head>
+<body>
+	<header id="pageHeader">
+		<%- include('./partials/dj_partials/dj_header')%>
+		
+	</header>
 
-    <article id="RadioName">
-      <%= newRadioName%><br />
-      <%- include('./partials/dj_partials/dj_radioName') %>
-      <article><%- include('./partials/dj_partials/dj_searchBar') %></article>
-    </article>
-    <aside id="leftBar">
-      <%- include('./partials/dj_partials/dj_leftBar') %>
-    </aside>
+	<article id="RadioName"><%= newRadioName%><br>
+		<%- include('./partials/dj_partials/dj_radioName') %>
+	<article>
+		<%- include('./partials/dj_partials/dj_searchBar') %>
+	</article>
+		
+	</article>
+	<aside id="leftBar">
+		<%- include('./partials/dj_partials/dj_leftBar')  %>
+	</aside>
 
-    <aside id="rightBar">
-      <%-include('./partials/dj_partials/dj_rightBar')%>
-    </aside>
+	<aside id="rightBar">
+		<%-include('./partials/dj_partials/dj_rightBar')%>
+	</aside>
 
-    <footer><%-include('./partials/dj_partials/dj_footer')%></footer>
-  </body>
+	<footer>
+		<%-include('./partials/dj_partials/dj_footer')%>
+	</footer>
+</body>
+
 </html>
